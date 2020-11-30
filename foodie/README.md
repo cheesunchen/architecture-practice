@@ -1,2 +1,2 @@
 # architecture-practice
-架构搭建练习
+电商web项目搭建
