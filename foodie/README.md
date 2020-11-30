@@ -1,2 +1,2 @@
-# architecture-practice
-电商web项目搭建
+# foodie
+电商web项目1.0搭建
