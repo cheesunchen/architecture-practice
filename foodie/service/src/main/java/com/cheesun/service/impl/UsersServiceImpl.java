@@ -32,6 +32,8 @@ public class UsersServiceImpl implements UsersService {
 
     private static final String USER_FACE = "http://122.152.205.72:88/group1/M00/00/05/CpoxxFw_8_qAIlFXAAAcIhVPdSg994.png";
 
+    private static final String DEFAULT_DATE = "1900-01-01";
+
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public Users getUserById(Integer id) {
@@ -71,7 +73,7 @@ public class UsersServiceImpl implements UsersService {
         // 默认头像
         user.setFace(USER_FACE);
         // 默认生日
-        user.setBirthday(DateUtil.stringToDate("1900-01-01"));
+        user.setBirthday(DateUtil.stringToDate(DEFAULT_DATE));
         // 默认性别保密
         user.setSex(SexEnum.SECRET.type);
 

@@ -270,7 +270,7 @@ public class DateUtil {
     }
 
     /** java.util.Date
-     * @param dateText  
+     * @param dateString
      * @param format  
      * @return
      */
@@ -281,7 +281,7 @@ public class DateUtil {
 
     /**
      * java.util.Date
-     * @param dateText  
+     * @param dateString
      */
     public static Date stringToDate(String dateString) {
         return stringToDate(dateString, ISO_EXPANDED_DATE_FORMAT, LENIENT_DATE);
