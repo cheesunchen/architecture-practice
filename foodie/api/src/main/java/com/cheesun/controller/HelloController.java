@@ -1,21 +1,24 @@
 package com.cheesun.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
- * @auther cheesun
- * @date 2020/11/30
- * @time 15:30
- * @description
+ * @author cheesun
+ * @date 2020/11/13
  */
+@ApiIgnore
 @RestController
-@RequestMapping("/hello/")
 public class HelloController {
 
-    @GetMapping("test")
+    private static final Logger logger = LoggerFactory.getLogger(HelloController.class);
+
+    @GetMapping("/hello")
     public String hello() {
-        return "hello world";
+        logger.info("info: hello~~");
+        return "Hello World";
     }
 }
