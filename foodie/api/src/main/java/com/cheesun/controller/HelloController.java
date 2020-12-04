@@ -22,4 +22,8 @@ public class HelloController {
         logger.info("info: hello~~");
         return JSONResult.ok("Hello World");
     }
+
+    public static void main(String[] args) {
+
+    }
 }
