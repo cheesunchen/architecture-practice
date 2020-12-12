@@ -24,6 +24,7 @@ public class CorsConfig {
         CorsConfiguration config = new CorsConfiguration();
         // 允许的来源地址
         config.addAllowedOrigin("http://localhost:8080");
+        config.addAllowedOrigin("http://www.bangmom.top:8070");
 
         // 设置是否发送cookie信息
         config.setAllowCredentials(true);

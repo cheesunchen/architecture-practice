@@ -43,11 +43,6 @@ public class UsersServiceImpl implements UsersService {
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public boolean queryUsernameIsExist(String username) {
-
-
-        TreeSet set = new TreeSet();
-
-
         Example userExample = new Example(Users.class);
         Example.Criteria userCriteria = userExample.createCriteria();
 
