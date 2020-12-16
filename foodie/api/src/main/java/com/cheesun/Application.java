@@ -1,7 +1,11 @@
 package com.cheesun;
 
+import org.apache.tomcat.util.http.LegacyCookieProcessor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import tk.mybatis.spring.annotation.MapperScan;
 
@@ -17,5 +21,11 @@ import tk.mybatis.spring.annotation.MapperScan;
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+    }
+
+    @Bean
+    public WebServerFactoryCustomizer<TomcatServletWebServerFactory> cookieProcessorCustomizer() {
+        return (factory) -> factory.addContextCustomizers(
+                (context) -> context.setCookieProcessor(new LegacyCookieProcessor()));
     }
 }
