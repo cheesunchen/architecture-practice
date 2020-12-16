@@ -212,6 +212,7 @@ public final class CookieUtils {
                     if (".".equals(domainName.indexOf(0))) {
                         domainName = domainName.substring(1);
                     }
+                    logger.info("========== domainName2: {} ==========", domainName);
                 	cookie.setDomain(domainName);
                 }
             }
