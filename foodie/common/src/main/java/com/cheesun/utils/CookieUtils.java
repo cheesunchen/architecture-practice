@@ -209,7 +209,7 @@ public final class CookieUtils {
             	String domainName = getDomainName(request);
                 logger.info("========== domainName: {} ==========", domainName);
                 if (!"localhost".equals(domainName)) {
-                    if (domainName.indexOf(".") == 0) {
+                    if (domainName.charAt(0) == '.') {
                         domainName = domainName.substring(1);
                     }
                     logger.info("========== domainName2: {} ==========", domainName);
