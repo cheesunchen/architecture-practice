@@ -22,10 +22,4 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
-
-    @Bean
-    public WebServerFactoryCustomizer<TomcatServletWebServerFactory> cookieProcessorCustomizer() {
-        return (factory) -> factory.addContextCustomizers(
-                (context) -> context.setCookieProcessor(new LegacyCookieProcessor()));
-    }
 }
